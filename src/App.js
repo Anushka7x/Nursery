@@ -1,44 +1,32 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+
 import Home from './pages/Home';
 import Shop from './pages/Shop';
+import ProductDetail from './pages/ProductDetail';
 import Cart from './pages/Cart';
+import ProductManager from './pages/ProductManager';
 import Checkout from './pages/Checkout';
 import OrderConfirmation from './pages/OrderConfirmation';
-import ProductManager from './pages/ProductManager';
-import Orders from './pages/Orders';
 import Login from './pages/Login';
-import ProtectedRoute from './components/ProtectedRoute';
+import Navbar from './components/Navbar';
 
-const App = () => {
+function App() {
   return (
-    <>
+    <Router>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/product/:id" element={<ProductDetail />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/admin" element={<ProductManager />} />
+        <Route path="/order-confirmation" element={<OrderConfirmation />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/shop" element={
-          <ProtectedRoute><Shop /></ProtectedRoute>
-        } />
-        <Route path="/cart" element={
-          <ProtectedRoute><Cart /></ProtectedRoute>
-        } />
-        <Route path="/checkout" element={
-          <ProtectedRoute><Checkout /></ProtectedRoute>
-        } />
-        <Route path="/order-confirmation" element={
-          <ProtectedRoute><OrderConfirmation /></ProtectedRoute>
-        } />
-        <Route path="/admin" element={
-          <ProtectedRoute adminOnly={true}><ProductManager /></ProtectedRoute>
-        } />
-        <Route path="/orders" element={
-          <ProtectedRoute adminOnly={true}><Orders /></ProtectedRoute>
-        } />
       </Routes>
-    </>
+    </Router>
   );
-};
+}
 
 export default App;
