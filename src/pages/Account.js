@@ -1,0 +1,1 @@
+export default function Account() { return <h2>Manage Your Account</h2>; }
