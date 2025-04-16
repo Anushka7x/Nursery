@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="refresh" content="0; URL=/#/" />
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="0; url=/#/" />
+    <script>
+      // Optional: redirect to full path with hash
+      const path = location.pathname.replace(/\/Nursery/, '');
+      location.replace('/Nursery/#' + path);
+    </script>
   </head>
   <body>
-    <p>Redirecting to the app...</p>
+    <p>Redirecting...</p>
   </body>
 </html>
