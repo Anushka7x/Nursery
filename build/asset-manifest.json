@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Nursery/static/css/main.81d372da.css",
+    "main.js": "/Nursery/static/js/main.7b0adf1f.js",
+    "static/media/slick.svg": "/Nursery/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/Nursery/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/Nursery/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/Nursery/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/Nursery/index.html",
+    "main.81d372da.css.map": "/Nursery/static/css/main.81d372da.css.map",
+    "main.7b0adf1f.js.map": "/Nursery/static/js/main.7b0adf1f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.81d372da.css",
+    "static/js/main.7b0adf1f.js"
+  ]
+}
